@@ -3,7 +3,7 @@
 
 int main() {
 	char x[1000];
-	int xx[9] = {};
+	int xx[10] = {};
 	scanf("%s", x);
 
 	int xStart = 0, count = 0;
@@ -11,15 +11,15 @@ int main() {
 		while(x[xStart] >= '0' && x[xStart] <= '9') {
 			count = x[xStart] - '0';
 
-			xx[count - 1]++;
+			xx[count]++;
 			xStart++;
 		}
 		xStart++;
 	}
 
-	for (int i = 0; i < 9; i++) {
+	for (int i = 0; i < 10; i++) {
 		if (xx[i] != 0) {
-			printf("%d->%d\n", i+1, xx[i]);
+			printf("%d->%d\n", i, xx[i]);
 		}
 	}
 
